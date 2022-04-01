@@ -1,0 +1,35 @@
+.cart {
+    height: max-content;
+    position: sticky;
+    top: 30px;
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.cart .cart-wrapper {
+    padding: 20px 30px;
+    border-radius: 5px;
+    background: #ECEFF1;
+}
+
+.cart .cart-wrapper h2,
+.cart .cart-wrapper h3,
+.cart .cart-wrapper h4 {
+    color: #232323;
+    margin: 10px 0;
+}
+
+.cart .cart-wrapper hr {
+    margin-block-start: 1.35rem;
+    border: 1px solid #dddddd;
+}
+
+
+@media screen and (max-width: 750px) {
+    .cart {
+        position: static;
+    }
+}

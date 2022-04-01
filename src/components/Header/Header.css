@@ -1,0 +1,27 @@
+.header {
+    background: #07152e;
+    width: 100%;
+}
+
+.header .wrapper {
+    padding: 14px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header .wrapper ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header .wrapper ul li {
+    list-style: none;
+}
