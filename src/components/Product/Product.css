@@ -39,6 +39,7 @@
     border-radius: 8px;
     box-sizing: padding-box;
     display: block;
+    width: calc(100% - 20px);
     position: absolute;
     left: 10px;
     right: 10px;
