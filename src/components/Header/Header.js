@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import logo from './../../images/Logo.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
+    const [open, setOpen] = useState(false);
     return (
         <div className="header">
             <div className="wrapper">
-                <a href="/home">
-                    <img src={logo} alt="" />
-                </a>
+                <Link to="/">
+                    <img src={logo} alt='Ema Jhon' />
+                </Link>
 
-                <ul>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/shop">Shop</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                <button onClick={() => setOpen(!open)} className='toggle'>{open ? 'Close' : 'Menu'}</button>
+
+                <ul style={open ? { transform: 'scaleY(1)' } : {}}>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/shop">Shop</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </div>
-        </div>
+        </div >
     );
 };
 

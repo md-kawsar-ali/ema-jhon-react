@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = ({ cart, clearCart }) => {
@@ -22,6 +23,8 @@ const Cart = ({ cart, clearCart }) => {
     // Grand Total
     const grandTotal = subTotal + tax;
 
+    const goTo = useNavigate();
+
     return (
         <div className="cart">
             <div className="cart-wrapper">
@@ -34,7 +37,7 @@ const Cart = ({ cart, clearCart }) => {
                 <h3>Grand Total: ${grandTotal ? grandTotal : '00.00'}</h3>
 
                 <button onClick={clearCart} className="clear-cart">Clear Cart</button>
-                <button className="review-order">Review Order</button>
+                <button onClick={() => goTo('/review-orders')} className="review-order">Review Order</button>
             </div>
         </div>
     );

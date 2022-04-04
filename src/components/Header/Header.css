@@ -25,3 +25,45 @@
 .header .wrapper ul li {
     list-style: none;
 }
+
+.toggle {
+    display: none;
+    padding: 6px 10px;
+    border: 2px solid #ccc;
+    background: none;
+    color: #eaeaea;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+    .header .wrapper {
+        position: relative;
+    }
+
+    .header .wrapper ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        width: 100%;
+        background: #07152e;
+        left: 0;
+        top: 55px;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid #333e51;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s;
+        z-index: 9999;
+    }
+
+    .toggle {
+        display: block;
+    }
+}
