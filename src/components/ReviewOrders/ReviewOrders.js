@@ -3,6 +3,7 @@ import useProducts from './../../hooks/useProducts';
 import useCart from './../../hooks/useCart';
 import './ReviewOrders.css';
 import { getStoredCart } from '../../utilities/fakedb';
+import Cart from './../Cart/Cart';
 
 const ReviewOrders = () => {
     const [products] = useProducts();
@@ -35,9 +36,12 @@ const ReviewOrders = () => {
                         cart.length ? cart.map(item => <CartItem key={item.id} item={item} removeItem={removeItem}></CartItem>) : <h2 className='empty'>Cart is Empty!</h2>
 
                     }
-
-                    {cart.length ? <button className='clear-cart' onClick={clearCart}>Clear Cart</button> : ''}
                 </div>
+
+                <Cart cart={cart}>
+                    <button onClick={clearCart} className="clear-cart">Clear Cart</button>
+                    <button className="review-order">Proceed to Checkout</button>
+                </Cart>
             </div>
         </div>
     );

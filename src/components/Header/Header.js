@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import './Header.css';
 import logo from './../../images/Logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const [open, setOpen] = useState(false);
+
+    const navigate = useNavigate();
+
     return (
         <div className="header">
             <div className="wrapper">
@@ -18,10 +21,11 @@ const Header = () => {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/shop">Shop</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/cart">Cart</Link></li>
+                    <li><button className='login-btn' onClick={() => navigate('/login')}>Login</button></li>
                 </ul>
             </div>
-        </div >
+        </div>
     );
 };
 

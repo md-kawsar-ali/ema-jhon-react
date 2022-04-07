@@ -5,6 +5,7 @@ import Cart from '../Cart/Cart';
 import Products from '../Products/Products';
 import './Shop.css';
 import useCart from './../../hooks/useCart';
+import { useNavigate } from 'react-router-dom';
 
 
 const Shop = () => {
@@ -35,11 +36,16 @@ const Shop = () => {
         localStorage.removeItem('shopping-cart');
     }
 
+    const goTo = useNavigate();
+
     return (
         <div className="shop">
             <div className="wrapper">
                 <Products products={products} addToCart={addToCart}></Products>
-                <Cart cart={cart} clearCart={clearCart}></Cart>
+                <Cart cart={cart}>
+                    <button onClick={clearCart} className="clear-cart">Clear Cart</button>
+                    <button onClick={() => goTo('/cart')} className="review-order">Review Order</button>
+                </Cart>
             </div>
         </div>
     );
