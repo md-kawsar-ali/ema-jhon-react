@@ -91,5 +91,29 @@
     .review-orders .wrapper {
         display: flex;
         flex-direction: column;
+        padding: 30px;
+    }
+
+    .cart-item {
+        gap: 10px;
+    }
+
+    .cart-item img {
+        height: 50px;
+        width: 50px;
+        border-radius: 7px;
+    }
+
+    .cart-item h4 {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .cart-item strong {
+        font-size: 13px;
+    }
+
+    .remove-item {
+        padding: 0;
     }
 }

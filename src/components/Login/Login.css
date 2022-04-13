@@ -1,5 +1,81 @@
 .login-wrapper {
     padding: 50px 70px;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.login-form {
+    width: 380px;
+    margin: auto;
+    padding: 30px 30px 40px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    border: 1px solid #f1f1f1;
+}
+
+.login-form h3 {
+    color: #232323;
+    font-size: 28px;
+    font-weight: 700;
     text-align: center;
-    min-height: 400px;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+
+.login-form label {
+    color: #555555;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.login-form input {
+    color: #333333;
+    background: transparent;
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+}
+
+.login-form input:focus {
+    outline: none;
+}
+
+.login-form input[type=submit] {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #07152E;
+    cursor: pointer;
+}
+
+.login-form p {
+    color: #454545;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.login-form p a {
+    color: #07152E;
+    text-decoration: none;
+}
+
+.login-form .error-msg {
+    color: #ff3c3c;
+    margin: 0 0 3px;
+}
+
+@media screen and (max-width: 540px){
+    .login-wrapper {
+        padding: 0 20px;
+    }
+    .login-form {
+        width: 100%;
+    }
 }

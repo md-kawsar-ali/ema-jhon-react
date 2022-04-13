@@ -43,6 +43,7 @@
 @media screen and (max-width: 780px) {
     .header .wrapper {
         position: relative;
+        padding: 14px 30px;
     }
 
     .header .wrapper ul {

@@ -4,8 +4,10 @@ import useCart from './../../hooks/useCart';
 import './ReviewOrders.css';
 import { getStoredCart } from '../../utilities/fakedb';
 import Cart from './../Cart/Cart';
+import { useNavigate } from 'react-router-dom';
 
 const ReviewOrders = () => {
+    const navigate = useNavigate();
     const [products] = useProducts();
     const [cart, setCart] = useCart(products);
 
@@ -40,7 +42,7 @@ const ReviewOrders = () => {
 
                 <Cart cart={cart}>
                     <button onClick={clearCart} className="clear-cart">Clear Cart</button>
-                    <button className="review-order">Proceed to Checkout</button>
+                    <button onClick={() => navigate('/checkout')} className="review-order">Proceed to Checkout</button>
                 </Cart>
             </div>
         </div>
